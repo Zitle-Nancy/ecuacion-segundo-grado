@@ -10,24 +10,42 @@
 		<form>
 			<div class="form-group">
 				<label for="a">Valor de A:</label>
-				<input type="text" class="form-control numbers" id="a" placeholder="valor de A" maxlength="6">
+				<input type="text" 
+					   class="form-control numbers" 
+					   id="a" 
+					   required 
+					   placeholder="valor de A" 
+					   maxlength="6">
 			</div>
 			<div class="form-group">
 				<label for="b">Valor de B:</label>
 				<input type="text" 
 					   class="form-control numbers" 
 					   id="b" 
+					   required 
 					   placeholder="Valor de B"
 					   maxlength="6" >
 			</div>
 			<div class="form-group">
 				<label for="c">Valor de C:</label>
-				<input type="text" class="form-control numbers" id="c" placeholder="Valor de C" maxlength="6">
+				<input type="text"
+					   class="form-control numbers"
+					   id="c"
+					   required 
+					   placeholder="Valor de C"
+					   maxlength="6">
 			</div>
-				<button type="submit" class="btn btn-primary" id="btn-calcular">Calcular</button>
-		</form><br>
-		<strong>Resultado:</strong>
-		<span id="resultado"></span>
+				<button type="button" class="btn btn-primary" id="btn-calcular">Calcular</button>
+		</form>
+		<br>
+		<div>
+			<strong>Resultado para X1:</strong>
+			<span id="x1"></span>
+		</div>
+		<div>
+			<strong>Resultado para X2:</strong>
+			<span id="x2"></span>
+		</div>
 	</div>
 	<script src="js/app.js"></script>
 </body>
