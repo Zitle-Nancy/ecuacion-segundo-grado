@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ecuación de Segundo Grado</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<strong class="text-center"><h1>Ecuaciones de Segundo Grado</h1></strong>
+	<div class="col-md-4 col-md-offset-4">
+		<form>
+			<div class="form-group">
+				<label for="a">Valor de A:</label>
+				<input type="text" class="form-control numbers" id="a" placeholder="valor de A" maxlength="6">
+			</div>
+			<div class="form-group">
+				<label for="b">Valor de B:</label>
+				<input type="text" 
+					   class="form-control numbers" 
+					   id="b" 
+					   placeholder="Valor de B"
+					   maxlength="6" >
+			</div>
+			<div class="form-group">
+				<label for="c">Valor de C:</label>
+				<input type="text" class="form-control numbers" id="c" placeholder="Valor de C" maxlength="6">
+			</div>
+				<button type="submit" class="btn btn-primary" id="btn-calcular">Calcular</button>
+		</form><br>
+		<strong>Resultado:</strong>
+		<span id="resultado"></span>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+</html>
