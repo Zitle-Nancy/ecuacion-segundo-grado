@@ -10,7 +10,7 @@
 	var x2 = document.getElementById('x2');
 	var numbers = document.getElementsByClassName('numbers');
 	var btnCalcular = document.getElementById('btn-calcular');
-	btnCalcular.addEventListener('click', convertToNumber);
+	btnCalcular.addEventListener('click', secondDegreeEquationResult);
 	for(var i=0; i < numbers.length; i++){
 		numbers[i].addEventListener('keydown',validateNumber);
 	}
@@ -20,19 +20,11 @@
 			e.preventDefault();
 		}
 	};
-	function convertToNumber(e) {
+	function secondDegreeEquationResult(e) {
 		e.preventDefault();
-		console.log(a.value);
 		valueA = Number(a.value);
 		valueB = Number(b.value); 
 		valueC = Number(c.value);
-		secondDegreeEquationResult(valueA, valueB, valueC);
-	};
-
-	function secondDegreeEquationResult(valueA, valueB, valueC) {
-		// valueA = Number(a.value);
-		// valueB = Number(b.value); 
-		// valueC = Number(c.value);
 		var discriminate = Math.sqrt(Math.pow(valueB, 2) - 4 * (valueA * valueC));
 		var numeratorPositive = (-1) * (valueB) + discriminate;
 		var numeratorNegative = (-1) * (valueB) - discriminate;
