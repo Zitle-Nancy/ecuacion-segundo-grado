@@ -21,20 +21,20 @@
 		e.preventDefault();
 		secondDegreeEquationResult(a,b,c);
 	}
-	function secondDegreeEquationResult(a,b,c) {
-		var valueA = Number(a.value);
-		var valueB = Number(b.value); 
-		var valueC = Number(c.value);
-		var radicando = Math.pow(valueB, 2) - 4 * (valueA * valueC);
-		var result = {
+	function secondDegreeEquationResult(a,b,c){
+		let valueA = Number(a.value);
+		let valueB = Number(b.value); 
+		let valueC = Number(c.value);
+		let radicando = Math.pow(valueB, 2) - 4 * (valueA * valueC);
+		let result = {
 			x1:"",
 			x2:"",
 			message:""
 		}
-		var discriminate = Math.sqrt(radicando);
-		var numeratorPositive = (-1) * (valueB) + discriminate;
-		var numeratorNegative = (-1) * (valueB) - discriminate;
-		var denominator = (2 * valueA);
+		let discriminate = Math.sqrt(radicando);
+		let numeratorPositive = (-1) * (valueB) + discriminate;
+		let numeratorNegative = (-1) * (valueB) - discriminate;
+		let denominator = (2 * valueA);
 		if(radicando < 0){
 			result.message = 'El resultado de la raiz cuadrada es negativa';
 			result.x1 = 'No hay solución';
