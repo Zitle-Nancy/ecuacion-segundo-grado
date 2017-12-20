@@ -6,12 +6,11 @@
 	var a = document.getElementById('a');
 	var b = document.getElementById('b');
 	var c = document.getElementById('c');
-	// var c = parseInt(document.getElementById('c').value); // porque no se puede
 	var x1 = document.getElementById('x1');
 	var x2 = document.getElementById('x2');
 	var numbers = document.getElementsByClassName('numbers');
 	var btnCalcular = document.getElementById('btn-calcular');
-	btnCalcular.addEventListener('click', secondDegreeEquationResult);
+	btnCalcular.addEventListener('click', convertToNumber);
 	for(var i=0; i < numbers.length; i++){
 		numbers[i].addEventListener('keydown',validateNumber);
 	}
@@ -21,26 +20,26 @@
 			e.preventDefault();
 		}
 	};
-	// function convertToNumber(a) {
-	// 	console.log(this.value);
-	// 	valueA = Number(this.value);
-	// 	// valueB = Number(b.value); 
-	// 	// valueC = Number(c.value);
-	// 	// secondDegreeEquationResultPositive(valueA, valueB, valueC);
-	// };
-
-	function secondDegreeEquationResult() {
+	function convertToNumber(e) {
+		e.preventDefault();
+		console.log(a.value);
 		valueA = Number(a.value);
 		valueB = Number(b.value); 
 		valueC = Number(c.value);
+		secondDegreeEquationResult(valueA, valueB, valueC);
+	};
+
+	function secondDegreeEquationResult(valueA, valueB, valueC) {
+		// valueA = Number(a.value);
+		// valueB = Number(b.value); 
+		// valueC = Number(c.value);
 		var discriminate = Math.sqrt(Math.pow(valueB, 2) - 4 * (valueA * valueC));
 		var numeratorPositive = (-1) * (valueB) + discriminate;
 		var numeratorNegative = (-1) * (valueB) - discriminate;
-		var denominador = (2 * valueA);
-		var resultX1 = numeratorPositive / denominador;
-		var resultX2 = numeratorNegative / denominador;
+		var denominator = (2 * valueA);
+		var resultX1 = numeratorPositive / denominator;
+		var resultX2 = numeratorNegative / denominator;
 		x1.innerText = resultX1;
 		x2.innerText = resultX2;
-		
 	};
 })();
